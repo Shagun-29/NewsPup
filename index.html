@@ -1,46 +1,92 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="./final.css">
-</head>
-<body>
-    
-    <div class="papa-layoout">
-            <header class="top-chart">
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Bootstrap Example</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="./final.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
-                <div class="middle-layout">
-                    <span class="mdl-layout-title">HOME</span>
-                    <div class="logo-layout"></div>
-                    <div class="search-area srch-fit">
-                        <label for="search" class="srch-button srch-button-image">
-                            <img class="src-icon" src="./images/srch-image.png" alt="search-icon">
-                        </label>
-                        <div class="srch-textfield">
-                            <input type="text" class="srch-input" id="search">
-                        </div>
-                    </div>
-                </div>
-
-            </header>
-            <!-- <main class="news-room">
-                <div class="grid-content">
-                    <div class="fetcher-content .mdl-shadow--2dp">
-                        
-                    </div>
-                </div>
-                <span class="no-news">::No News Selected::</span>
-            </main> -->
+    <style> 
+      input[type=text] {
+          position: relative;
+          right: 0%;
+          width: 130px;
+          box-sizing: border-box;
+          border: 2px solid #ccc;
+          border-radius: 4px;
+          font-size: 16px;
+          background-color: white;
+          
+          background-position: 10px 10px; 
+          background-repeat: no-repeat;
+          padding: 12px 20px 12px 40px;
+          -webkit-transition: width 0.4s ease-in-out;
+          transition: width 0.4s ease-in-out;
+      }
+      
+      input[type=text]:focus {
+          width: 100%;
+      }
+      </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+    <nav class="navbar navbar-inverse">
+          <ul  class="nav navbar-nav">
+            <li class="active"><a href="#">General</a></li>
+            <li><a href="#">Technology</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">Entertainment</a></li>
+            <li><a href="#">Politics</a></li>
+            <li><a href="#">Travel</a></li>
+            <li><form>
+              <input type="text" name="search" placeholder="Search..">
+            </form></li>
+          </ul>
+    </nav>
     </div>
 
     
-    
+    <div>
+        <div class="col-sm-2">
+            <nav id="sidebar">
+                    <!-- Sidebar Header -->
+                    <div class="sidebar-header">
+                       <h3> News Channel </h3>
+                    </div>
+                    
+        
+                    <!-- Sidebar Links -->
+                    <ul class="list-unstyled components">
+                        <li class="active"><button value ="abc_news" onclick="newsClick()" class="btn btn-default btn-md">ABC NEWS </button></li>
+                        <li><button  value="bbc_news" onclick="newsClick()" class="btn btn-default btn-md">BBC NEWS</button></li>
+                        <li><button  value="bbc_sports" onclick="newsClick()" class="btn btn-default btn-md">BBC SPORTS</button></li>
+                        <li><button  value="espn" onclick="newsClick()" class="btn btn-default btn-md">ESPN</button></li>
+                        <li><button  value="bi" onclick="newsClick()" class="btn btn-default btn-md">Business Insider</button></li>
+                        <li><button   value="buzzfeed" onclick="newsClick()" class="btn btn-default btn-md">BuzzFeed</button></li>
+                        <li><button   value="cnbc" onclick="newsClick()" class="btn btn-default btn-md">CNBC</button></li>
+                        <li><button   value="cnn" onclick="newsClick()" class="btn btn-default btn-md">CNN</button></li>
+                    </ul>
+                </nav> 
+        </div> 
 
-    <div id="content"> News : </div>
-
-</body>
+    <div class="col-sm-10">
+        <main class="news-room">
+            <div class="grid-content">
+                <div id="visitor" class="fetcher-content .mdl-shadow--2dp">
+                
+                </div>
+            
+            </div>
+            <span class="no-news"> :: No News Selected ::</span>
+        </main>
+    </div>
+    </div>
+    <script src= "./newspup.js"></script>
+  </body>
 </html>
-
-<!--Key : 576618585d1f440991daaa4520d3219f -->
