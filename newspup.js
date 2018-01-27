@@ -39,17 +39,112 @@ var newsGetter = function(newsLink,callback){
 
 }
 
-function newsClick(){
-    let 
+const newsRender = function(data){
+    var visitor = document.getElementById('visitor');
+    var newsCount = data.totalResults;
+    for(var i = 0; i< newsCount; i++)
+    {
+        if(data.articles[i].description == null){
+
+        }else{
+
+            visitor.insertAdjacentHTML('beforeend', `
+                <div style="background-image: url( ${ data.articles[i].urlToImage } );" class="card">
+                                    <div class="new-title">
+                                        <p>${ ""+(data.articles[i].title+"")  }</p>
+                                    </div>
+                                    <div class="informer">
+                                        <p>${ ""+ data.articles[i].description +"" }</p>
+                        
+                                    </div>
+                                    <span class="news-details">Source: ${ ""+data.articles[i].source.name+"" }, Author: ${ ""+data.articles[i].author+" " }, ${new Date(data.articles[i].publishedAt).getDate()}</span>
+                            </div>
+
+            `
+        );
+
+        }
+        console.log(data.articles[i].description)
+        
+    }
 }
-var visitor = document.getElementById('visitor');
 
-newsGetter(cnn, (error,data)=>{
+function newsClick(){
+    console.log(window.event.target.value);
+    console.log(this.value);
+    // newsGetter(this.ele);
     
-    console.log(data);
-    visitor.innerHTML = `<p>${ JSON.stringify(data.articles[2])  }</p>`
-})
+    switch (window.event.target.value) {
+        case 'abc_news':
+                newsGetter(abc_news, (error,data)=>{
+                newsRender(data);
+                // console.log(data);
+                
+            })
+            break;
+        case 'bbc_news':
+                newsGetter(bbc_news, (error,data)=>{
+                newsRender(data);
+                // console.log(data);
+                
+            })
+            break;
+        case 'bbc_sports':
+                newsGetter(bbc_sports, (error,data)=>{
+                newsRender(data);
+                // console.log(data);
+                
+            })
+            break;
+        case 'espn':
+                newsGetter(espn, (error,data)=>{
+                newsRender(data);
+                // console.log(data);
+                
+            })
+            break;
+        case 'bi':
+                newsGetter(bi, (error,data)=>{
+                newsRender(data);
+                // console.log(data);
+                
+            })
+            break;
+        case 'buzzfeed':
+                newsGetter(buzzfeed, (error,data)=>{
+                newsRender(data);
+                // console.log(data);
+                
+            })
+            break;
+        case 'cnbc':
+                newsGetter(cnbc, (error,data)=>{
+                newsRender(data);
+                // console.log(data);
+                
+            })
+            break;
+        case 'cnn':
+                newsGetter(cnn, (error,data)=>{
+                newsRender(data);
+                // console.log(data);
+                
+            })
+            break;
+        default:
+            break;
+    }
+    newsRequest.send()
+}
 
-newsRequest.send();
+
+// `<div class="flashes" style="background-image: url( ${ data.articles[i].urlToImage })"><p>${ ""+(data.articles[i].title+"")  }</p>
+// <p>${ ""+ data.articles[i].description +"" }</p>
+// <hr/>
+// <br/>
+// </div>`
+
+
+
 
 

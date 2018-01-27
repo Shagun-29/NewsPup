@@ -148,13 +148,33 @@ html, body {
     color: inherit;
 }
 
+/* news drawer css */
+
+.news-drawer {
+
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    visibility: hidden;
+    background: #757575;
+    
+    
+}
+.flashes {
+    background-repeat: no-repeat;
+    display: block;
+    height: 500px;
+
+    
+}
+
 /* main part css */
 
 .news-room{
     position: relative;
     display: inline-block;
-    overflow-y: auto;
-    overflow-x: hidden;
+    /* overflow-y: auto; */
+    /* overflow-x: hidden; */
     flex-grow: 1;
     z-index: -1;
     width: 100%;
@@ -195,3 +215,88 @@ html, body {
                 0 3px 1px -2px rgba(0,0,0,.2), 
                 0 1px 5px 0 rgba(0,0,0,.12);
 }
+
+/* flashcard css */
+
+.card{
+    position: relative;
+    height: 500px;
+    width: 1000px;
+    margin: 0% auto;
+    display: block;
+    background-color: blue;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-attachment: fixed;
+    border-radius: 20px;
+    overflow-x: hidden;
+    background-size: cover;
+    background-position: 20%;
+    background-repeat: no-repeat;
+    transition: all 2s ease;
+    /* background-image: url( "https://static01.nyt.com/images/2018/01/27/business/27WYNN/27WYNN-facebookJumbo.jpg"); */
+  }
+  .card:hover{
+      transform: translate(2%,2%,0);
+      cursor: pointer;
+  }
+  .informer{
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-right: 17px;
+    background-color: yellow;
+    bottom: 0;
+    border-top-right-radius: 500px; 
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+  }
+  .informer > p {
+    position: inherit;
+    left: 2%;
+    width: 80%;
+  }
+  .new-title {
+    position: absolute;
+    height: 10%;
+    width: 80%;
+    left: 0%;
+    /*text-align: center;*/
+    /*align-content: baseline;*/
+    /*vertical-align: baseline;*/
+    background-color: magenta;
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+    border-bottom-right-radius: 500px ;
+    border-bottom-right-radius: 200px; 
+  }
+  .new-title > p {
+    position: absolute;
+    left: 5%;
+    font-weight: bold;
+    letter-spacing: 2px;
+  
+  }
+  .news-details{
+    text-align: baseline;
+    border-bottom-right-radius: inherit;
+    /*align-content: baseline;*/
+    /*align-items: baseline;*/
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    font-weight: 100;
+    color: #757575;
+    background-color: rgba(255,255,255,.6);
+    height: 14px;
+    width: 300px;
+    right: 0;
+    bottom: 0%;
+  }
+  
+  .is-visible {
+    visibility: hidden;
+  }
