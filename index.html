@@ -4,89 +4,73 @@
       <title>Bootstrap Example</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <link rel="stylesheet" href="./final.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
-    <style> 
-      input[type=text] {
-          position: relative;
-          right: 0%;
-          width: 130px;
-          box-sizing: border-box;
-          border: 2px solid #ccc;
-          border-radius: 4px;
-          font-size: 16px;
-          background-color: white;
-          
-          background-position: 10px 10px; 
-          background-repeat: no-repeat;
-          padding: 12px 20px 12px 40px;
-          -webkit-transition: width 0.4s ease-in-out;
-          transition: width 0.4s ease-in-out;
-      }
-      
-      input[type=text]:focus {
-          width: 100%;
-      }
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
+      <link rel="stylesheet" href="./finale.css">
       </style>
     </head>
     <body>
-        <div class="container-fluid">
-    <nav class="navbar navbar-inverse">
-          <ul  class="nav navbar-nav">
-            <li class="active"><a href="#">General</a></li>
-            <li><a href="#">Technology</a></li>
-            <li><a href="#">Sports</a></li>
-            <li><a href="#">Entertainment</a></li>
-            <li><a href="#">Politics</a></li>
-            <li><a href="#">Travel</a></li>
-            <li><form>
-              <input type="text" name="search" placeholder="Search..">
-            </form></li>
-          </ul>
-    </nav>
-    </div>
-
-    
-    <div>
-        <div class="col-sm-2">
-            <nav id="sidebar">
-                    <!-- Sidebar Header -->
-                    <div class="sidebar-header">
-                       <h3> News Channel </h3>
-                    </div>
-                    
-        
-                    <!-- Sidebar Links -->
-                    <ul class="list-unstyled components">
-                        <li class="active"><button value ="abc_news" onclick="newsClick()" class="btn btn-default btn-md">ABC NEWS </button></li>
-                        <li><button  value="bbc_news" onclick="newsClick()" class="btn btn-default btn-md">BBC NEWS</button></li>
-                        <li><button  value="bbc_sports" onclick="newsClick()" class="btn btn-default btn-md">BBC SPORTS</button></li>
-                        <li><button  value="espn" onclick="newsClick()" class="btn btn-default btn-md">ESPN</button></li>
-                        <li><button  value="bi" onclick="newsClick()" class="btn btn-default btn-md">Business Insider</button></li>
-                        <li><button   value="buzzfeed" onclick="newsClick()" class="btn btn-default btn-md">BuzzFeed</button></li>
-                        <li><button   value="cnbc" onclick="newsClick()" class="btn btn-default btn-md">CNBC</button></li>
-                        <li><button   value="cnn" onclick="newsClick()" class="btn btn-default btn-md">CNN</button></li>
+            <header class="headerr">
+                    <ul id="menne" class="menu">
+                            
+                            <div class="menu_icon"></div>
+                              <li><button class="" onclick="newsClick()" value="abc_news">ABC News</button></li>
+                              <li><button class="" onclick="newsClick()" value="bbc_news">BBC News</button></li>
+                              <li><button class="" onclick="newsClick()" value="bbc_sports">BBC Sport</button></li>
+                              <li><button class="" onclick="newsClick()" value="espn">ESPN</button></li>
+                              <li><button class="" onclick="newsClick()" value="bi">Business Insider</button></li>
+                              <li><button class="" onclick="newsClick()" value="buzzfeed">Buzzfeed</button></li>
+                              <li><button class="" onclick="newsClick()" value="cnbc">CNBC</button></li>
+                              <li><button class="" onclick="newsClick()" value="cnn">CNN</button></li>
                     </ul>
-                </nav> 
-        </div> 
-
-    <div class="col-sm-10">
+                    <div class="wrap">
+                      <div id="drop-down"">  
+                          <ul id="dp-list" class="drop-menu">
+                            <option class="drop-select" value="abc-news">ABC News</option><hr>
+                            <option class="drop-select" value="bbc-news">BBC News</option><hr>
+                            <option class="drop-select" value="bbc-sport">BBC Sport</option><hr>
+                            <option class="drop-select" value="espn">ESPN</option><hr>
+                            <option class="drop-select" value="business-insider">Business Insider</option><hr>
+                            <option class="drop-select" value="buzzfeed">Buzzfeed</option><hr>
+                            <option class="drop-select" value="cnbc">CNBC</option><hr>
+                            <option class="drop-select" value="cnn">CNN</option>
+                          </ul>
+                        </div>
+                      </div>
+                    <ul class="vert-menu">
+                    <li id="shifter"></li>
+                      <button onclick="freshMenu()" value="all"><li>ALL</li></button>
+                      <button onclick="freshMenu()" value="entert"><li>ENTERTAINMENT</li></button>
+                      <button onclick="freshMenu()" value="sports"><li>SPORTS</li></button>
+                      <button onclick="freshMenu()" value="business"><li>BUSINESS</li></button>
+                    </ul>
+                    <div class="srch-bar mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                            <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+                              <i class="material-icons">search</i>
+                            </label>
+                            <div class="mdl-textfield__expandable-holder">
+                              <input class="mdl-textfield__input" type="text" id="search">
+                              <label class="mdl-textfield__label" for="search">Enter your query...</label>
+                            </div>
+                          </div>
+                   
+                          
+                          
+                  
+            </header>
         <main class="news-room">
-            <div class="grid-content">
+                <div id="newsDet" class='newsDetails'><span>NewPUP 🗞 🐶 : </span><span>fd</span> </div>
                 <div id="visitor" class="fetcher-content .mdl-shadow--2dp">
                 
                 </div>
             
-            </div>
-            <span class="no-news"> :: No News Selected ::</span>
+            
+            
         </main>
-    </div>
-    </div>
+    
+    
     <script src= "./newspup.js"></script>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   </body>
 </html>
