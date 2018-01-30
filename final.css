@@ -1,9 +1,13 @@
 
 html, body {
     font-family: 'Roboto', 'Helvetica', sans-serif;
-    margin: 0;
+    margin: 0 auto;
+
   }
 
+  header{
+      z-index: 4;
+  }
   .top-chart {
     width: 100%;
     min-width: 70%;
@@ -169,18 +173,25 @@ html, body {
 }
 
 /* main part css */
+div {
+    
+}
 
 .news-room{
-    position: relative;
-    display: inline-block;
+
+    width: 100%;
+    margin-top: 100px;
+    position: absolute;
+    align-content: flex-end;
     /* overflow-y: auto; */
     /* overflow-x: hidden; */
-    flex-grow: 1;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background-color: #f5f5f5;
+    margin-bottom: 100px;
+    
+    height: fit-content;
+    background-color:white;
+    
 }
+
 
 .grid-content{
     display: flex;
@@ -217,42 +228,63 @@ html, body {
 }
 
 /* flashcard css */
+div{
+    margin: 0 auto;
+}
 
+#visitor {
+    background-color: #757575;
+    overflow: hidden;
+    scroll-behavior: unset;
+    
+}
 .card{
+    margin: 0 auto;
     position: relative;
     height: 500px;
     width: 1000px;
-    margin: 0% auto;
     display: block;
-    background-color: blue;
+    background-color: transparent;
     margin-top: 10px;
     margin-bottom: 10px;
     background-attachment: fixed;
     border-radius: 20px;
-    overflow-x: hidden;
+    overflow: hidden;
     background-size: cover;
     background-position: 20%;
     background-repeat: no-repeat;
-    transition: all 2s ease;
+    transition: all .3s ease;
     /* background-image: url( "https://static01.nyt.com/images/2018/01/27/business/27WYNN/27WYNN-facebookJumbo.jpg"); */
   }
   .card:hover{
-      transform: translate(2%,2%,0);
+      transform: scale(1.05,1.02);
       cursor: pointer;
   }
   .informer{
     position: absolute;
-    height: 50%;
+    height: 15vh;
     width: 100%;
     word-wrap: break-word;
     overflow-x: hidden;
     overflow-y: scroll;
     padding-right: 17px;
-    background-color: yellow;
+    background-color: rgba(7, 7, 7, 0.84);
     bottom: 0;
     border-top-right-radius: 500px; 
     border-bottom-right-radius: inherit;
     border-bottom-left-radius: inherit;
+    color:white;
+  }
+  .informer p {
+      margin-top: 1vh;
+      font-size: 3vh;
+      line-height: 3.4vh;
+  }
+  .new-title{
+      height: fit-content;
+  }
+  .new-title p{
+    line-height: 50px;
   }
   .informer > p {
     position: inherit;
@@ -264,20 +296,25 @@ html, body {
     height: 10%;
     width: 80%;
     left: 0%;
+    font-size: fit-content;
     /*text-align: center;*/
     /*align-content: baseline;*/
     /*vertical-align: baseline;*/
-    background-color: magenta;
+    background-color: rgb(46, 41, 41);
     border-top-right-radius: inherit;
     border-top-left-radius: inherit;
     border-bottom-right-radius: 500px ;
     border-bottom-right-radius: 200px; 
+    color:white;
   }
   .new-title > p {
-    position: absolute;
+    position: relative;
     left: 5%;
+    overflow-wrap: break-word;
+    
+    font-size: fit-height;
     font-weight: bold;
-    letter-spacing: 2px;
+    padding-right: 5px;
   
   }
   .news-details{
@@ -287,7 +324,7 @@ html, body {
     /*align-items: baseline;*/
     display: block;
     position: absolute;
-    font-size: 12px;
+    font-size: fit-width;
     font-weight: 100;
     color: #757575;
     background-color: rgba(255,255,255,.6);
@@ -298,5 +335,20 @@ html, body {
   }
   
   .is-visible {
-    visibility: hidden;
+    visibility: visible;
+  }
+
+  .newsDetails{
+      cursor: pointer;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: fit-width;
+      line-height: 1vh;
+      background-color: gold;
+      width: 80%;
+    padding: 40px 25px;
+      margin: 0 auto 5vh auto;
+  }
+  .newsDetails span{
+      display: inline;
+      font-size: 10vh;
   }

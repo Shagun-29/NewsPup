@@ -1,59 +1,76 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="./final.css">
-</head>
-<body>
-    
-    <div class="papa-layoout">
-            <div class="news-drawer">
-                
-                    
-                    
-                    
-            </div>
-            <header class="top-chart">
-                
-                <div class="middle-layout">
-                    
-                    <span class="mdl-layout-title">HOME</span>
-                    <div class="logo-layout"></div>
-                    <div class="search-area srch-fit">
-                        <label for="search" class="srch-button srch-button-image">
-                            <img class="src-icon" src="./images/srch-image.png" alt="search-icon">
-                        </label>
-                        <div class="srch-textfield">
-                            <input type="text" class="srch-input" id="search">
-                        </div>
-                    </div>
-                </div>
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>NewsPUP | We Deliver News You Need</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="./final.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
+      <link rel="shortcut icon" href="./images/1x/android-icon-36x36.png" type="image/x-icon">
+      <link rel="stylesheet" href="./finale.css">
 
-            </header>
-            
-
-
-            <main class="news-room">
-                <div class="grid-content">
-                    <div id="visitor" class="fetcher-content .mdl-shadow--2dp">
-                        
+    </head>
+    <body>
+        <div id="sp" class="splash">
+            <img src="./images/splash-screen/PUP.png" alt="splash">
+        </div>
+            <header class="headerr">
+                    <ul id="menne" class="menu">
                             
-
-                    </div>
+                            <div class="menu_icon"></div>
+                              <li><button class="" onclick="newsClick()" value="abc_news">ABC News</button></li>
+                              <li><button class="" onclick="newsClick()" value="bbc_news">BBC News</button></li>
+                              <li><button class="" onclick="newsClick()" value="bbc_sports">BBC Sport</button></li>
+                              <li><button class="" onclick="newsClick()" value="espn">ESPN</button></li>
+                              <li><button class="" onclick="newsClick()" value="bi">Business Insider</button></li>
+                              <li><button class="" onclick="newsClick()" value="buzzfeed">Buzzfeed</button></li>
+                              <li><button class="" onclick="newsClick()" value="cnbc">CNBC</button></li>
+                              <li><button class="" onclick="newsClick()" value="cnn">CNN</button></li>
+                    </ul>
+                    <div class="wrap">
+                      <div id="drop-down">  
+                          <ul id="dp-list" class="drop-menu">
+                            <option class="drop-select" value="abc-news">ABC News</option><hr>
+                            <option class="drop-select" value="bbc-news">BBC News</option><hr>
+                            <option class="drop-select" value="bbc-sport">BBC Sport</option><hr>
+                            <option class="drop-select" value="espn">ESPN</option><hr>
+                            <option class="drop-select" value="business-insider">Business Insider</option><hr>
+                            <option class="drop-select" value="buzzfeed">Buzzfeed</option><hr>
+                            <option class="drop-select" value="cnbc">CNBC</option><hr>
+                            <option class="drop-select" value="cnn">CNN</option>
+                          </ul>
+                        </div>
+                      </div>
+                    <ul class="vert-menu">
+                    <li id="shifter"></li>
+                      <button onclick="freshMenu()" value="all"><li>ALL</li></button>
+                      <button onclick="freshMenu()" value="entert"><li>ENTERTAINMENT</li></button>
+                      <button onclick="freshMenu()" value="sports"><li>SPORTS</li></button>
+                      <button onclick="freshMenu()" value="business"><li>BUSINESS</li></button>
+                    </ul>
+                    <div class="srch-bar mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                            <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+                              <i class="material-icons">search</i>
+                            </label>
+                            <div class="mdl-textfield__expandable-holder">
+                              <input class="mdl-textfield__input" type="text" id="search">
+                              <label class="mdl-textfield__label" for="search">Enter your query...</label>
+                            </div>
+                          </div>
+                   
+                          
+                          
+                  
+            </header>
+        <main class="news-room">
+                <div id="newsDet" class="newsDetails"><span>NewPUP 🗞 🐶 : </span><span>fd</span> </div>
+                <div id="visitor" class="fetcher-content .mdl-shadow--2dp">
                 </div>
-                <div>
-
-                    
-                </div>
-                <!-- <span class="no-news">::No News Selected::</span> -->
-            </main>
-    </div>
-    <button id="btn1" onclick="newsClick()" value="cnn" >click here</button>
-    <script src="./newspup.js"></script>
-
-</body>
+        </main>
+    
+    
+    <script src= "./newspup.js"></script>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  </body>
 </html>
-
-<!--Key : 576618585d1f440991daaa4520d3219f -->
