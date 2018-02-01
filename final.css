@@ -236,7 +236,11 @@ div{
     background-color: #757575;
     overflow: hidden;
     scroll-behavior: unset;
+    /* transition: all 3s ease-in; */
     
+}
+#visitor div{
+    transition: all .3s ease-in;
 }
 .card{
     margin: 0 auto;
@@ -247,7 +251,7 @@ div{
     background-color: transparent;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-attachment: fixed;
+    background-attachment: local;
     border-radius: 20px;
     overflow: hidden;
     background-size: cover;
@@ -336,6 +340,9 @@ div{
   
   .is-visible {
     visibility: visible;
+  }
+  .is-collapse{
+      height: 0;
   }
 
   .newsDetails{

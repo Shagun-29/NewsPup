@@ -209,7 +209,7 @@ drawer-toggle{
   overflow: hidden;
   width: 150px;
   background-color: #94c2cf;
-  transition: all .4s ease-out;
+  transition: all .2s ease-in-out;
   
 } 
 
@@ -230,7 +230,6 @@ drawer-toggle{
 .isSelected{
   background-color: rgba(163, 150, 76, 0.966);
 }
-
 
 .splash{
   z-index: 3000;

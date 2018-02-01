@@ -1,7 +1,7 @@
 <!DOCTYPE html>
   <html lang="en">
     <head>
-      <title>NewsPUP | We Deliver News You Need</title>
+      <title>NewsPup</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="./final.css">
@@ -9,7 +9,6 @@
       <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
       <link rel="shortcut icon" href="./images/1x/android-icon-36x36.png" type="image/x-icon">
       <link rel="stylesheet" href="./finale.css">
-
     </head>
     <body>
         <div id="sp" class="splash">
@@ -19,14 +18,14 @@
                     <ul id="menne" class="menu">
                             
                             <div class="menu_icon"></div>
-                              <li><button class="" onclick="newsClick()" value="abc_news">ABC News</button></li>
-                              <li><button class="" onclick="newsClick()" value="bbc_news">BBC News</button></li>
-                              <li><button class="" onclick="newsClick()" value="bbc_sports">BBC Sport</button></li>
-                              <li><button class="" onclick="newsClick()" value="espn">ESPN</button></li>
-                              <li><button class="" onclick="newsClick()" value="bi">Business Insider</button></li>
-                              <li><button class="" onclick="newsClick()" value="buzzfeed">Buzzfeed</button></li>
-                              <li><button class="" onclick="newsClick()" value="cnbc">CNBC</button></li>
-                              <li><button class="" onclick="newsClick()" value="cnn">CNN</button></li>
+                              <li><button class="" onclick="newsClick(event.target.value)" value="abc-news">ABC News</button></li>
+                              <li><button class="" onclick="newsClick(event.target.value)" value="bbc-news">BBC News</button></li>
+                              <li><button class="" onclick="newsClick(event.target.value)" value="bbc-sport">BBC Sport</button></li>
+                              <li><button class="" onclick="newsClick(event.target.value)" value="espn">ESPN</button></li>
+                              <li><button class="" onclick="newsClick(event.target.value)" value="business-insider">Business Insider</button></li>
+                              <li><button class="" onclick="newsClick(event.target.value)" value="buzzfeed">Buzzfeed</button></li>
+                              <li><button class="" onclick="newsClick(event.target.value)" value="cnbc">CNBC</button></li>
+                              <li><button class="" onclick="newsClick(event.target.value)" value="cnn">CNN</button></li>
                     </ul>
                     <div class="wrap">
                       <div id="drop-down">  
@@ -66,7 +65,11 @@
         <main class="news-room">
                 <div id="newsDet" class="newsDetails"><span>NewPUP 🗞 🐶 : </span><span>fd</span> </div>
                 <div id="visitor" class="fetcher-content .mdl-shadow--2dp">
+                
                 </div>
+            
+            
+            
         </main>
     
     
